@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function pilih(){
+        let daftar_kendaraan = document.getElementById("kendaraan");
+        let idx = daftar_kendaraan.selectedIndex;
+
+        console.log('kendaraan index ke- ' + idx + "adalah" + daftar_kendaraan[idx].value);
+        let area_gambar = document.getElementById('gambar');
+        area_gambar.src = "asset/" + daftar_kendaraan[idx].value + ".jpg";
+        
+        alert("ini adalah :" + daftar_kendaraan.value)
+    }
+</script>
+<body>
+    <h1>kendaraan</h1>
+    <p>pilih</p>
+
+    <form id="form">
+        <select name="" id="kendaraan" onchange="pilih()">
+            <option value="tidak ada"></option>
+            <option value="jet">Bus</option>
+            <option value="kapal">kapal</option>
+            <option value="kereta">kereta</option>
+            <option value="motor">motor</option>
+            <option value="pesawat">Mobil</option>
+            <option value="tank">Pesawat</option>
+    
+
+        </select>
+    </form>
+    <br>
+    <img src="asset\tidak ada.jpg" class= "asset" alt="" id="gambar"/> 
+</body>
+</html>
